@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  color: red;
+}
+
+.subtitulo {
+  margin: 5px 0;
+  font-size: 18px;
+  color: white;
+}
+
+.carrito-icono {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.producto {
+  width: 250px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+button:hover {
+  background: darkred;
+}
+
+#carrito-popup {
+  position: fixed;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  background: red;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  transition: bottom 0.3s;
+  z-index: 100;
+}
+
+#carrito-popup h3 {
+  margin-top: 0;
+}
+
+#carrito-popup ul {
+  list-style: none;
+  padding: 0;
+}
+
+#carrito-popup li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+#carrito-popup button {
+  width: 100%;
+  margin-top: 10px;
+}
