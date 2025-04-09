@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knockout Store - Tienda de Mariana Torres</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Knockout Store</h1>
+    <h2 class="subtitulo">Tienda de Mariana Torres</h2>
+
+    <label for="categoria">Filtrar por categoría:</label>
+    <select id="categoria" onchange="filtrarPorCategoria()">
+      <option value="todos">Todos</option>
+      <option value="Guantes">Guantes</option>
+      <option value="Accesorios">Accesorios</option>
+      <option value="Protección">Protección</option>
+    </select>
+
+    <div class="carrito-icono" onclick="mostrarCarrito()">
+      🛒 <span id="contador-carrito">0</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="productos" class="productos"></div>
+  </main>
+
+  <div id="carrito-popup">
+    <h3>Carrito de Compras</h3>
+    <ul id="lista-carrito"></ul>
+    <p>Total: $<span id="total-carrito">0</span></p>
+    <button id="boton-comprar" onclick="finalizarCompra()" style="display: none;">Finalizar compra</button>
+    <div id="paypal-button-container" style="margin-top: 10px; display: none;"></div>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    <button onclick="cerrarCarrito()">Cerrar</button>
+  </div>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD&components=buttons"></script>
+  <script src="script.js"></script>
+</body>
+</html>
